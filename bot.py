@@ -49,8 +49,6 @@ class Bot(BotBase):
         if not self.ready:
             self.ready = True
 
-        self.guild = self.get_guild(cfg.GUILD_ID)
-
         await self.wait_until_ready()
         if not self.synced:
             await self.tree.sync()
